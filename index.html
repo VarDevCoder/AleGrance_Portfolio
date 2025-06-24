@@ -2,23 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0" />
   <title>Alejandra Elizabeth Grance | Especialista en Atención al Cliente & Marketing</title>
   <meta name="description" content="Portfolio de Alejandra Elizabeth Grance Mujica - Especialista en atención al cliente, marketing y marketing digital con experiencia en diversos sectores">
   
-  <!-- Google Fonts -->
+  <!-- Preconnect para mejor performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts optimizado para mobile -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+  
+  <!-- Font Awesome optimizado -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'; this.onload=null;">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+  
+  <!-- Critical CSS inline para mobile -->
+  <style>
+    /* Critical CSS inlined */
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; line-height: 1.6; }
+    .navbar { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95); z-index: 1000; }
+    .hero { min-height: 100vh; display: flex; align-items: center; background: linear-gradient(135deg, #667eea 0%, #3b6e4e 100%); }
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2rem !important; }
+      .container { padding: 0 1rem !important; }
+    }
+  </style>
   
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Animated Iridescent Background -->
-  <div class="iridescent-bg"></div>
+  <!-- Simplified background for mobile -->
+  <div class="iridescent-bg" data-mobile-simple="true"></div>
   
   <!-- Navigation-->
   <nav class="navbar" id="navbar">
@@ -34,7 +51,7 @@
         <li><a href="#education" class="nav-link">Educación</a></li>
         <li><a href="#contact" class="nav-link">Contacto</a></li>
       </ul>
-      <div class="hamburger">
+      <div class="hamburger" aria-label="Menú">
         <span></span>
         <span></span>
         <span></span>
@@ -44,40 +61,45 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-background">
-      <div class="animated-bg"></div>
+    <div class="hero-background mobile-optimized">
+      <div class="animated-bg" data-reduce-motion="true"></div>
     </div>
     <div class="hero-content">
       <div class="hero-text">
-                  <h1 class="hero-title">
-            Hola, soy<span class="highlight">Alejandra Elizabeth Grance</span>
-          </h1>
-          <p class="hero-subtitle">
-            Especialista en Atención al Cliente | Marketing | Marketing Digital
-          </p>
-          <p class="hero-description">
-            Persona con iniciativa, adaptable y con muchas ganas de crecer. Con experiencia en atención al cliente, gestión de redes sociales y marketing digital. Busco un lugar donde seguir creciendo y aportando actitud y compromiso.
-          </p>
+        <h1 class="hero-title">
+          Hola, soy <span class="highlight">Alejandra Elizabeth Grance</span>
+        </h1>
+        <p class="hero-subtitle">
+          Especialista en Atención al Cliente | Marketing | Marketing Digital
+        </p>
+        <p class="hero-description">
+          Persona con iniciativa, adaptable y con muchas ganas de crecer. Con experiencia en atención al cliente, gestión de redes sociales y marketing digital. Busco un lugar donde seguir creciendo y aportando actitud y compromiso.
+        </p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">Ver Experiencia</a>
           <a href="#contact" class="btn btn-secondary">Contactar</a>
         </div>
         <div class="social-links">
-                      <a href="https://www.linkedin.com/in/alejandra-elizabeth-grance-mujica-1417872b7" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-                <a href="https://www.instagram.com/zaimiwi?igsh=am9yczA3dWVycDRu" class="social-link" title="Instagram">
-              <i class="fab fa-instagram"></i>
-          <a href="mailto:hangrance.vk@gmail.com"" class="social-link" title="Email">
+          <a href="https://www.linkedin.com/in/alejandra-elizabeth-grance-mujica-1417872b7" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="LinkedIn de Alejandra">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/zaimiwi?igsh=am9yczA3dWVycDRu" class="social-link" title="Instagram" aria-label="Instagram de Alejandra">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:hangrance.vk@gmail.com" class="social-link" title="Email" aria-label="Email de Alejandra">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="images/alejandra-profile.jpg" alt="Alejandra Elizabeth Grance Mujica" class="profile-photo">
+        <!-- Lazy loading image with WebP support -->
+        <picture>
+          <source srcset="images/alejandra-profile.webp" type="image/webp">
+          <img src="images/alejandra-profile.jpg" alt="Alejandra Elizabeth Grance Mujica" class="profile-photo" loading="lazy" decoding="async" width="400" height="400">
+        </picture>
       </div>
     </div>
-    <div class="scroll-indicator">
+    <div class="scroll-indicator" data-mobile-hide="true">
       <div class="scroll-arrow"></div>
     </div>
   </section>
@@ -102,34 +124,34 @@
           </p>
           <div class="about-highlights">
             <div class="highlight-item">
-              <i class="fas fa-sync-alt"></i>
+              <i class="fas fa-sync-alt" aria-hidden="true"></i>
               <span>Adaptación</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-handshake"></i>
+              <i class="fas fa-handshake" aria-hidden="true"></i>
               <span>Responsabilidad</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-comments"></i>
+              <i class="fas fa-comments" aria-hidden="true"></i>
               <span>Comunicación asertiva</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-puzzle-piece"></i>
+              <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
               <span>Resolución de problemas</span>
             </div>
           </div>
         </div>
         <div class="about-stats">
           <div class="stat-item">
-            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-number" data-target="3" aria-label="3 años de experiencia">0</div>
             <div class="stat-label">Años de experiencia</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number" data-target="6">0</div>
+            <div class="stat-number" data-target="6" aria-label="6 trabajos realizados">0</div>
             <div class="stat-label">Trabajos realizados</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-number" data-target="3" aria-label="3 cursos completados">0</div>
             <div class="stat-label">Cursos completados</div>
           </div>
         </div>
@@ -387,17 +409,31 @@
             <div class="testimonial-author">
               <p class="author-name">Leonardo da Vinci</p>
               <p class="author-role">Polímata del Renacimiento</p>
-</div>
-<div class="testimonial-author">
-  <p class="author-name">Khalil Gibran</p>
-  <p class="author-role">Poeta y filósofo</p>
-</div>
-
-</div>
-<div class="testimonial-author">
-  <p class="author-name">Anónimo</p>
-  <p class="author-role">Pensador desconocido</p>
-</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="testimonial-text">
+              "El aprendizaje nunca agota la mente."
+            </p>
+            <div class="testimonial-author">
+              <p class="author-name">Khalil Gibran</p>
+              <p class="author-role">Poeta y filósofo</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="testimonial-text">
+              "El aprendizaje nunca agota la mente."
+            </p>
+            <div class="testimonial-author">
+              <p class="author-name">Anónimo</p>
+              <p class="author-role">Pensador desconocido</p>
+            </div>
           </div>
         </div>
       </div>
@@ -405,6 +441,8 @@
         <span class="dot active" data-slide="0"></span>
         <span class="dot" data-slide="1"></span>
         <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+        <span class="dot" data-slide="4"></span>
       </div>
     </div>
   </section>
@@ -500,6 +538,7 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <script src="script.js"></script>
+  <!-- JavaScript optimizado para mobile -->
+  <script src="script.js" defer></script>
 </body>
 </html>
